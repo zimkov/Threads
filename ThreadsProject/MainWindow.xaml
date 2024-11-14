@@ -1,0 +1,39 @@
+﻿<Window x:Class="ThreadsProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ThreadsProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <TabControl>
+            <TabItem Header="Lab1">
+                <Grid x:Name="Lab1" Background="#FFE5E5E5">
+                    <TextBox x:Name="PathTextBox" HorizontalAlignment="Center" Margin="0,65,0,0" TextWrapping="Wrap" Text="Введите путь файла" VerticalAlignment="Top" Width="436"/>
+                    <Label Content="Path:" HorizontalAlignment="Left" Margin="182,34,0,0" VerticalAlignment="Top"/>
+                    <ComboBox x:Name="NComboBox" HorizontalAlignment="Left" Margin="179,126,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="NComboBox_SelectionChanged"/>
+                    <ComboBox x:Name="MComboBox" HorizontalAlignment="Center" Margin="0,126,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="MComboBox_SelectionChanged"/>
+                    <ComboBox x:Name="MathComboBox" HorizontalAlignment="Left" Margin="495,126,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="MathComboBox_SelectionChanged"/>
+                    <Label Content="N (кол-во чисел)" HorizontalAlignment="Left" Height="24" Margin="179,97,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="M (кол-во потоков)" HorizontalAlignment="Center" Height="24" Margin="0,97,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="MathFunction" HorizontalAlignment="Left" Height="24" Margin="495,97,0,0" VerticalAlignment="Top" Width="89"/>
+                    <TextBox x:Name="KTextBox" HorizontalAlignment="Left" Height="20" Margin="218,168,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="81"/>
+                    <Label Content="K" HorizontalAlignment="Left" Margin="182,164,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="GenerateFile" Content="Сгенерировать файл" HorizontalAlignment="Left" Height="24" Margin="170,246,0,0" VerticalAlignment="Top" Width="138" Click="GenerateFile_Click"/>
+                    <Button x:Name="StartButton" Content="Запустить потоки" HorizontalAlignment="Left" Margin="477,246,0,0" VerticalAlignment="Top" Width="138" Height="24" Click="StartButton_Click"/>
+                    <Button x:Name="ReadFile" Content="Прочитать файл" HorizontalAlignment="Center" Height="24" Margin="0,246,0,0" VerticalAlignment="Top" Width="138" Click="ReadFile_Click"/>
+                    <Label x:Name="TimeResultLabel" Content="Время выполнения: " HorizontalAlignment="Center" Height="28" Margin="0,324,0,0" VerticalAlignment="Top" Width="436"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Lab2">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Lab3">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

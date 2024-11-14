@@ -1,0 +1,15 @@
+C:\Users\Admin\Desktop\Alexei\C# проекты\Threads\ThreadsProject\bin\Debug\ThreadsProject.exe.config
+C:\Users\Admin\Desktop\Alexei\C# проекты\Threads\ThreadsProject\bin\Debug\ThreadsProject.exe
+C:\Users\Admin\Desktop\Alexei\C# проекты\Threads\ThreadsProject\bin\Debug\ThreadsProject.pdb
+C:\Users\Admin\Desktop\Alexei\C# проекты\Threads\ThreadsProject\obj\Debug\ThreadsProject.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Alexei\C# проекты\Threads\ThreadsProject\obj\Debug\MainWindow.g.cs
+C:\Users\Admin\Desktop\Alexei\C# проекты\Threads\ThreadsProject\obj\Debug\App.g.cs
+C:\Users\Admin\Desktop\Alexei\C# проекты\Threads\ThreadsProject\obj\Debug\ThreadsProject_MarkupCompile.cache
+C:\Users\Admin\Desktop\Alexei\C# проекты\Threads\ThreadsProject\obj\Debug\ThreadsProject_MarkupCompile.lref
+C:\Users\Admin\Desktop\Alexei\C# проекты\Threads\ThreadsProject\obj\Debug\MainWindow.baml
+C:\Users\Admin\Desktop\Alexei\C# проекты\Threads\ThreadsProject\obj\Debug\ThreadsProject.g.resources
+C:\Users\Admin\Desktop\Alexei\C# проекты\Threads\ThreadsProject\obj\Debug\ThreadsProject.Properties.Resources.resources
+C:\Users\Admin\Desktop\Alexei\C# проекты\Threads\ThreadsProject\obj\Debug\ThreadsProject.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Alexei\C# проекты\Threads\ThreadsProject\obj\Debug\ThreadsProject.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Alexei\C# проекты\Threads\ThreadsProject\obj\Debug\ThreadsProject.exe
+C:\Users\Admin\Desktop\Alexei\C# проекты\Threads\ThreadsProject\obj\Debug\ThreadsProject.pdb
