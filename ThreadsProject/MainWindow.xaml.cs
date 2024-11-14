@@ -30,7 +30,7 @@ namespace ThreadsProject
             InitializeComponent();
             NComboBox.ItemsSource = new int[] { 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000};
             NComboBox.SelectedIndex = 1;
-            MComboBox.ItemsSource = new int[] { 1, 2, 3, 4, 5, 10, 20, 30, 40, 50, 100 };
+            MComboBox.ItemsSource = new int[] { 1, 2, 3, 4, 5, 10, 20, 30, 100 };
             MComboBox.SelectedIndex = 1;
             MathComboBox.ItemsSource = new MathFunctionClass[]
             {
@@ -47,9 +47,17 @@ namespace ThreadsProject
             path = PathTextBox.Text;
             N = (int)NComboBox.SelectedItem;
             M = (int)MComboBox.SelectedItem;
-            K = int.Parse(KTextBox.Text);
+            int cof;
+            bool intParse = int.TryParse(KTextBox.Text, out cof);
+            if (!intParse)
+            {
+                //Введено неправильное K
+                ResultLabel.Text = "Значение коэффициента K должно быть целочисленное";
+                return;
+            }
+            K = cof;
             mathFunc = (MathFunctionClass)MathComboBox.SelectedItem;
-            TimeResultLabel.Content = ThreadClass.CreateThreadPool(this.listNumbers.ToArray(), M, K, mathFunc);
+            ResultLabel.Text = ThreadClass.CreateThreadPool(this.listNumbers.ToArray(), M, K, mathFunc);
         }
 
         private void GenerateFile_Click(object sender, RoutedEventArgs e)
@@ -61,7 +69,7 @@ namespace ThreadsProject
                 File.AppendAllText(path, i + " ");
             }
             File.AppendAllText(path, N + "");
-            Console.WriteLine("Файл заполнен числами от 1 до " + N);
+            ResultLabel.Text = "Файл заполнен числами от 1 до " + N;
         }
 
         private void NComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -88,13 +96,30 @@ namespace ThreadsProject
                         }
                         else
                         {
-                            Console.WriteLine($"Не удалось преобразовать строку: {part}");
+                            ResultLabel.Text = $"Не удалось преобразовать строку: {part}";
+                            return;
                         }
                     }
                 }
             }
-            Console.WriteLine("Файл прочитан\n\n");
+            ResultLabel.Text = "Файл прочитан";
             this.listNumbers = listNumbers;
+        }
+
+        private void PickFileButton_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+
+            dlg.DefaultExt = ".txt";
+            dlg.Filter = "TXT Files (*.txt)|*.txt";
+
+            Nullable<bool> result = dlg.ShowDialog();
+
+            if (result == true)
+            {
+                string filename = dlg.FileName;
+                PathTextBox.Text = filename;
+            }
         }
 
         private void MComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

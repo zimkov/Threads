@@ -11,7 +11,7 @@
         <TabControl>
             <TabItem Header="Lab1">
                 <Grid x:Name="Lab1" Background="#FFE5E5E5">
-                    <TextBox x:Name="PathTextBox" HorizontalAlignment="Center" Margin="0,65,0,0" TextWrapping="Wrap" Text="Введите путь файла" VerticalAlignment="Top" Width="436"/>
+                    <TextBox x:Name="PathTextBox" HorizontalAlignment="Left" Margin="182,65,0,0" TextWrapping="Wrap" Text="Введите путь файла" VerticalAlignment="Top" Width="378" IsReadOnlyCaretVisible="True" IsReadOnly="True"/>
                     <Label Content="Path:" HorizontalAlignment="Left" Margin="182,34,0,0" VerticalAlignment="Top"/>
                     <ComboBox x:Name="NComboBox" HorizontalAlignment="Left" Margin="179,126,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="NComboBox_SelectionChanged"/>
                     <ComboBox x:Name="MComboBox" HorizontalAlignment="Center" Margin="0,126,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="MComboBox_SelectionChanged"/>
@@ -24,7 +24,9 @@
                     <Button x:Name="GenerateFile" Content="Сгенерировать файл" HorizontalAlignment="Left" Height="24" Margin="170,246,0,0" VerticalAlignment="Top" Width="138" Click="GenerateFile_Click"/>
                     <Button x:Name="StartButton" Content="Запустить потоки" HorizontalAlignment="Left" Margin="477,246,0,0" VerticalAlignment="Top" Width="138" Height="24" Click="StartButton_Click"/>
                     <Button x:Name="ReadFile" Content="Прочитать файл" HorizontalAlignment="Center" Height="24" Margin="0,246,0,0" VerticalAlignment="Top" Width="138" Click="ReadFile_Click"/>
-                    <Label x:Name="TimeResultLabel" Content="Время выполнения: " HorizontalAlignment="Center" Height="28" Margin="0,324,0,0" VerticalAlignment="Top" Width="436"/>
+                    <TextBox Text="Время выполнения: " HorizontalAlignment="Left" Margin="179,306,0,0" VerticalAlignment="Top" x:Name="ResultLabel"
+                       Width="326" FontWeight="Bold" FontSize="12" BorderThickness="0,0,0,0"  IsReadOnly="True" Background="{x:Null}" Height="24" IsReadOnlyCaretVisible="True" />
+                    <Button x:Name="PickFileButton" Content="Выбрать" HorizontalAlignment="Left" Margin="565,64,0,0" VerticalAlignment="Top" Click="PickFileButton_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Lab2">
