@@ -79,29 +79,47 @@ namespace ThreadsProject
 
         private void ReadFile_Click(object sender, RoutedEventArgs e)
         {
+            ResultLabel.Text = "Идет чтение файла...";
             path = String.Format(@PathTextBox.Text);
             List<double> listNumbers = new List<double>();
-            using (StreamReader sr = new StreamReader(path))
+            foreach (var line in File.ReadLines(path))
             {
-                string line;
-                while ((line = sr.ReadLine()) != null)
+                string[] parts = line.Split(' ');
+                foreach (var part in parts)
                 {
-                    string[] parts = line.Split(' ');
-                    foreach (var part in parts)
+                    if (double.TryParse(part, out double number))
                     {
-                        if (double.TryParse(part, out double number))
-                        {
-                            listNumbers.Add(number);
-                            //Console.Write(number + " ");
-                        }
-                        else
-                        {
-                            ResultLabel.Text = $"Не удалось преобразовать строку: {part}";
-                            return;
-                        }
+                        listNumbers.Add(number);
+                        //Console.Write(number + " ");
+                    }
+                    else
+                    {
+                        ResultLabel.Text = $"Не удалось преобразовать строку: {part}";
+                        return;
                     }
                 }
             }
+            //using (StreamReader sr = new StreamReader(path))
+            //{
+            //    string line;
+            //    while ((line = sr.ReadLine()) != null)
+            //    {
+            //        string[] parts = line.Split(' ');
+            //        foreach (var part in parts)
+            //        {
+            //            if (double.TryParse(part, out double number))
+            //            {
+            //                listNumbers.Add(number);
+            //                //Console.Write(number + " ");
+            //            }
+            //            else
+            //            {
+            //                ResultLabel.Text = $"Не удалось преобразовать строку: {part}";
+            //                return;
+            //            }
+            //        }
+            //    }
+            //}
             ResultLabel.Text = "Файл прочитан";
             this.listNumbers = listNumbers;
         }

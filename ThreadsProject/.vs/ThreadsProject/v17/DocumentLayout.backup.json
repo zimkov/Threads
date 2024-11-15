@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|c:\\users\\admin\\desktop\\alexei\\c# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\threads\\threadsproject\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\mathfunctionclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|solutionrelative:mathfunctionclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\threadclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|solutionrelative:threadclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,8 +15,12 @@
       "RelativeMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|solutionrelative:threadrecordclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\threadclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|solutionrelative:threadclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|c:\\users\\admin\\desktop\\alexei\\c# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\threads\\threadsproject\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\mathfunctionclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|solutionrelative:mathfunctionclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,45 +35,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MathFunctionClass.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\MathFunctionClass.cs",
-              "RelativeDocumentMoniker": "MathFunctionClass.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\MathFunctionClass.cs",
-              "RelativeToolTip": "MathFunctionClass.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAlwI0AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T06:05:13.797Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAADgv3EAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAADwv14AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T04:08:09.64Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ThreadRecordClass.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\ThreadRecordClass.cs",
               "RelativeDocumentMoniker": "ThreadRecordClass.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\ThreadRecordClass.cs",
               "RelativeToolTip": "ThreadRecordClass.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBgAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T07:33:28.331Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -85,15 +72,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "ThreadClass.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\ThreadClass.cs",
               "RelativeDocumentMoniker": "ThreadClass.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\ThreadClass.cs",
               "RelativeToolTip": "ThreadClass.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAQwEEAAABiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T07:36:16.142Z"
+              "WhenOpened": "2024-11-14T07:36:16.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MathFunctionClass.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\MathFunctionClass.cs",
+              "RelativeDocumentMoniker": "MathFunctionClass.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\MathFunctionClass.cs",
+              "RelativeToolTip": "MathFunctionClass.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T06:05:13.797Z"
             }
           ]
         }

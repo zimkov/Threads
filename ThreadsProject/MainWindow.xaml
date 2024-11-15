@@ -24,8 +24,8 @@
                     <Button x:Name="GenerateFile" Content="Сгенерировать файл" HorizontalAlignment="Left" Height="24" Margin="170,246,0,0" VerticalAlignment="Top" Width="138" Click="GenerateFile_Click"/>
                     <Button x:Name="StartButton" Content="Запустить потоки" HorizontalAlignment="Left" Margin="477,246,0,0" VerticalAlignment="Top" Width="138" Height="24" Click="StartButton_Click"/>
                     <Button x:Name="ReadFile" Content="Прочитать файл" HorizontalAlignment="Center" Height="24" Margin="0,246,0,0" VerticalAlignment="Top" Width="138" Click="ReadFile_Click"/>
-                    <TextBox Text="Время выполнения: " HorizontalAlignment="Left" Margin="179,306,0,0" VerticalAlignment="Top" x:Name="ResultLabel"
-                       Width="326" FontWeight="Bold" FontSize="12" BorderThickness="0,0,0,0"  IsReadOnly="True" Background="{x:Null}" Height="24" IsReadOnlyCaretVisible="True" />
+                    <TextBox Text="Время выполнения: " HorizontalAlignment="Center" Margin="0,306,0,0" VerticalAlignment="Top" x:Name="ResultLabel"
+                       Width="436" FontWeight="Bold" FontSize="12" BorderThickness="0,0,0,0"  IsReadOnly="True" Background="{x:Null}" Height="24" IsReadOnlyCaretVisible="True" />
                     <Button x:Name="PickFileButton" Content="Выбрать" HorizontalAlignment="Left" Margin="565,64,0,0" VerticalAlignment="Top" Click="PickFileButton_Click"/>
                 </Grid>
             </TabItem>
