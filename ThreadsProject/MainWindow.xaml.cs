@@ -24,10 +24,13 @@ namespace ThreadsProject
         string path;
         int N, M, K;
         MathFunctionClass mathFunc;
+        SimpleNumbersClass algorithm;
         List<double> listNumbers;
         public MainWindow()
         {
             InitializeComponent();
+
+            //Лабораторная 1
             NComboBox.ItemsSource = new int[] { 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000};
             NComboBox.SelectedIndex = 1;
             MComboBox.ItemsSource = new int[] { 1, 2, 3, 4, 5, 10, 20, 30, 100 };
@@ -40,6 +43,20 @@ namespace ThreadsProject
                 new MathFunctionClass("Фибоначи", new Fibonacci())
             };
             MathComboBox.SelectedIndex = 0;
+
+
+            //Лабораторная 2
+            NComboBox2.ItemsSource = new int[] { 100, 10000, 1000000 };
+            NComboBox2.SelectedIndex = 0;
+            MComboBox2.ItemsSource = new int[] { 1, 2, 3, 4, 5, 10, 20, 30, 100 };
+            MComboBox2.SelectedIndex = 1;
+            AlgorithmComboBox.ItemsSource = new SimpleNumbersClass[]
+            {
+                new SimpleNumbersClass("Алгоритм1", new Algorithm1()),
+                new SimpleNumbersClass("Алгоритм2", new Algorithm2())
+            };
+            AlgorithmComboBox.SelectedIndex = 0;
+
         }
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
@@ -64,12 +81,19 @@ namespace ThreadsProject
         {
             path = String.Format(@PathTextBox.Text);
             File.WriteAllText(path, "");
-            for (int i = 1; i <= N; i++)
+            string buffer = "";
+            for (int i = 1; i < N; i += 100)
             {
-                File.AppendAllText(path, i + " ");
+                for (int j = i; j < i+100; j++)
+                {
+                    buffer += j + " ";
+                }
+                File.AppendAllText(path, buffer);
+                buffer = "";
             }
             File.AppendAllText(path, N + "");
             ResultLabel.Text = "Файл заполнен числами от 1 до " + N;
+            ResultLabel2.Text = "Файл заполнен числами от 1 до " + N;
         }
 
         private void NComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -95,32 +119,13 @@ namespace ThreadsProject
                     else
                     {
                         ResultLabel.Text = $"Не удалось преобразовать строку: {part}";
+                        ResultLabel2.Text = $"Не удалось преобразовать строку: {part}";
                         return;
                     }
                 }
             }
-            //using (StreamReader sr = new StreamReader(path))
-            //{
-            //    string line;
-            //    while ((line = sr.ReadLine()) != null)
-            //    {
-            //        string[] parts = line.Split(' ');
-            //        foreach (var part in parts)
-            //        {
-            //            if (double.TryParse(part, out double number))
-            //            {
-            //                listNumbers.Add(number);
-            //                //Console.Write(number + " ");
-            //            }
-            //            else
-            //            {
-            //                ResultLabel.Text = $"Не удалось преобразовать строку: {part}";
-            //                return;
-            //            }
-            //        }
-            //    }
-            //}
             ResultLabel.Text = "Файл прочитан";
+            ResultLabel2.Text = "Файл прочитан";
             this.listNumbers = listNumbers;
         }
 
@@ -137,7 +142,40 @@ namespace ThreadsProject
             {
                 string filename = dlg.FileName;
                 PathTextBox.Text = filename;
+                PathTextBox2.Text = filename;
             }
+        }
+
+        private void StartButton2_Click(object sender, RoutedEventArgs e)
+        {
+            path = PathTextBox2.Text;
+            N = (int)NComboBox2.SelectedItem;
+            M = (int)MComboBox2.SelectedItem;
+            algorithm = (SimpleNumbersClass)AlgorithmComboBox.SelectedItem;
+            ResultLabel2.Text = SimpleThread.GetSimpleNumbers(this.listNumbers.ToArray(), algorithm);
+        }
+
+        private void AlgorithmComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (AlgorithmComboBox.SelectedItem == null)
+            {
+                //Обработка ошибки
+            }
+            if (AlgorithmComboBox.SelectedItem is SimpleNumbersClass simple)
+            {
+                algorithm = simple;
+            }
+        }
+
+        private void NComboBox2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            N = (int)NComboBox2.SelectedItem;
+        }
+
+        private void MComboBox2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            M = (int)MComboBox2.SelectedItem;
         }
 
         private void MComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

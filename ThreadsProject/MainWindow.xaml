@@ -30,7 +30,22 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Lab2">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid x:Name="Lab2" Background="#FFE5E5E5">
+                    <TextBox x:Name="PathTextBox2" HorizontalAlignment="Left" Margin="182,65,0,0" TextWrapping="Wrap" Text="Введите путь файла" VerticalAlignment="Top" Width="378" IsReadOnlyCaretVisible="True" IsReadOnly="True"/>
+                    <Label Content="Path:" HorizontalAlignment="Left" Margin="182,34,0,0" VerticalAlignment="Top"/>
+                    <ComboBox x:Name="NComboBox2" HorizontalAlignment="Left" Margin="179,126,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="NComboBox2_SelectionChanged"/>
+                    <ComboBox x:Name="MComboBox2" HorizontalAlignment="Center" Margin="0,126,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="MComboBox2_SelectionChanged"/>
+                    <ComboBox x:Name="AlgorithmComboBox" HorizontalAlignment="Left" Margin="495,126,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="AlgorithmComboBox_SelectionChanged"/>
+                    <Label Content="N (кол-во чисел)" HorizontalAlignment="Left" Height="24" Margin="179,97,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="M (кол-во потоков)" HorizontalAlignment="Center" Height="24" Margin="0,97,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Алгоритм" HorizontalAlignment="Left" Height="24" Margin="495,97,0,0" VerticalAlignment="Top" Width="89"/>
+                    <Button x:Name="GenerateFile2" Content="Сгенерировать файл" HorizontalAlignment="Left" Height="24" Margin="170,246,0,0" VerticalAlignment="Top" Width="138" Click="GenerateFile_Click"/>
+                    <Button x:Name="StartButton2" Content="Найти простые числа" HorizontalAlignment="Left" Margin="477,246,0,0" VerticalAlignment="Top" Width="138" Height="24" Click="StartButton2_Click"/>
+                    <Button x:Name="ReadFile2" Content="Прочитать файл" HorizontalAlignment="Center" Height="24" Margin="0,246,0,0" VerticalAlignment="Top" Width="138" Click="ReadFile_Click"/>
+                    <TextBox Text="Время выполнения: " HorizontalAlignment="Center" Margin="0,306,0,0" VerticalAlignment="Top" x:Name="ResultLabel2"
+       Width="436" FontWeight="Bold" FontSize="12" BorderThickness="0,0,0,0"  IsReadOnly="True" Background="{x:Null}" Height="24" IsReadOnlyCaretVisible="True" />
+                    <Button x:Name="PickFileButton2" Content="Выбрать" HorizontalAlignment="Left" Margin="565,64,0,0" VerticalAlignment="Top" Click="PickFileButton_Click"/>
+                </Grid>
             </TabItem>
             <TabItem Header="Lab3">
                 <Grid Background="#FFE5E5E5"/>

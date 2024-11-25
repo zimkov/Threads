@@ -56,6 +56,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="SimpleNumbersClass.cs" />
+    <Compile Include="SimpleRecordClass.cs" />
+    <Compile Include="SimpleThread.cs" />
     <Compile Include="ThreadClass.cs" />
     <Compile Include="ThreadRecordClass.cs" />
     <Page Include="MainWindow.xaml">
