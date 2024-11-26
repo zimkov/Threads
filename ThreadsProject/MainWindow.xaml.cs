@@ -53,7 +53,8 @@ namespace ThreadsProject
             AlgorithmComboBox.ItemsSource = new SimpleNumbersClass[]
             {
                 new SimpleNumbersClass("Алгоритм1", new Algorithm1()),
-                new SimpleNumbersClass("Алгоритм2", new Algorithm2())
+                new SimpleNumbersClass("Алгоритм2", new Algorithm2()),
+                new SimpleNumbersClass("Алгоритм2", new Algorithm3())
             };
             AlgorithmComboBox.SelectedIndex = 0;
 
@@ -152,7 +153,7 @@ namespace ThreadsProject
             N = (int)NComboBox2.SelectedItem;
             M = (int)MComboBox2.SelectedItem;
             algorithm = (SimpleNumbersClass)AlgorithmComboBox.SelectedItem;
-            ResultLabel2.Text = SimpleThread.GetSimpleNumbers(this.listNumbers.ToArray(), algorithm);
+            ResultLabel2.Text = SimpleThread.GetSimpleNumbers(this.listNumbers.ToArray(), algorithm, M);
         }
 
         private void AlgorithmComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

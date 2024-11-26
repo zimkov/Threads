@@ -33,7 +33,7 @@ namespace ThreadsProject
         }
 
 
-        public static string GetSimpleNumbers(double[] array, SimpleNumbersClass algorithm)
+        public static string GetSimpleNumbers(double[] array, SimpleNumbersClass algorithm, int countThreads)
         {
             int countBaseNumbers = (int)Math.Sqrt(array.Length);
             double[] basenumbers = new double[countBaseNumbers];
@@ -54,7 +54,7 @@ namespace ThreadsProject
 
             ConcurrentBag<double> simpleNumbers = new ConcurrentBag<double>();
 
-            simpleNumbers = algorithm.FindSimple(arrayNumbers, basenumbers, simpleNumbers);
+            simpleNumbers = algorithm.FindSimple(arrayNumbers, basenumbers, simpleNumbers, countThreads);
 
             double[] resultArray = simpleNumbers.ToArray();
             Array.Sort(resultArray);
