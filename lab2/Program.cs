@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
+﻿using System.Collections.Concurrent;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+using System.IO;
+using System.Security.Cryptography;
 
-namespace ThreadsProject
+namespace lab2
 {
-    public class SimpleThread
+    internal class Program
     {
         
         static double[] SieveEratosthenes(double[] numbers)
@@ -19,7 +15,7 @@ namespace ThreadsProject
             {
                 for (int j = 0; j < baseNumbers.Count(); j++)
                 {
-                    if(baseNumbers[j] == 1)
+                    if (baseNumbers[j] == 1)
                     {
                         baseNumbers.Remove(baseNumbers[j]);
                     }
@@ -32,13 +28,12 @@ namespace ThreadsProject
             return baseNumbers.ToArray();
         }
 
-
         public static string GetSimpleNumbers(double[] array, SimpleNumbersClass algorithm, int countThreads)
         {
             int countBaseNumbers = (int)Math.Sqrt(array.Length);
             double[] basenumbers = new double[countBaseNumbers];
 
-            for(int i = 0; i < countBaseNumbers; i++)
+            for (int i = 0; i < countBaseNumbers; i++)
             {
                 basenumbers[i] = array[i];
             }
@@ -46,7 +41,7 @@ namespace ThreadsProject
             int countN = array.Length - countBaseNumbers;
             double[] arrayNumbers = new double[countN];
 
-            for(int i = 0; i < arrayNumbers.Length; i++)
+            for (int i = 0; i < arrayNumbers.Length; i++)
             {
                 arrayNumbers[i] = array[i + countBaseNumbers];
             }
@@ -59,7 +54,7 @@ namespace ThreadsProject
             double[] resultArray = new double[simpleNumbers.Count];
 
             int countValue = 0;
-            foreach (double value in simpleNumbers.Values) 
+            foreach (double value in simpleNumbers.Values)
             {
                 resultArray[countValue] = value;
                 countValue++;
@@ -69,7 +64,7 @@ namespace ThreadsProject
 
             string result = "";
 
-            foreach(double number in basenumbers)
+            foreach (double number in basenumbers)
             {
                 result += number + " ";
             }
@@ -83,5 +78,36 @@ namespace ThreadsProject
 
         }
 
+
+        static void Main(string[] args)
+        {
+
+            string path = @"C:\Users\Admin\Desktop\Alexei\numbers.txt";
+            int N = 100;
+            int M = 4;
+            SimpleNumbersClass algorithm = new SimpleNumbersClass("Алгоритм3", new Algorithm3());
+
+            List<double> listNumbers = new List<double>();
+
+            foreach (var line in File.ReadLines(path))
+            {
+                string[] parts = line.Split(' ');
+                foreach (var part in parts)
+                {
+                    if (double.TryParse(part, out double number))
+                    {
+                        listNumbers.Add(number);
+                        //Console.Write(number + " ");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Не удалось преобразовать строку: {part}");
+                        return;
+                    }
+                }
+            }
+
+            Console.WriteLine(GetSimpleNumbers(listNumbers.ToArray(), algorithm, M));
+        }
     }
 }

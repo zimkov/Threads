@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ThreadsProject
+namespace lab2
 {
     public class SimpleRecordClass
     {

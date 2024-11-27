@@ -54,7 +54,7 @@ namespace ThreadsProject
             {
                 new SimpleNumbersClass("Алгоритм1", new Algorithm1()),
                 new SimpleNumbersClass("Алгоритм2", new Algorithm2()),
-                new SimpleNumbersClass("Алгоритм2", new Algorithm3())
+                new SimpleNumbersClass("Алгоритм3", new Algorithm3())
             };
             AlgorithmComboBox.SelectedIndex = 0;
 
