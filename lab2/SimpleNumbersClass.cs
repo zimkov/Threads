@@ -231,23 +231,20 @@ namespace lab2
                 simpleNumbers.TryAdd(number, number);
             }
             // Объявляем массив сигнальных сообщений
-            ManualResetEvent[] events = new ManualResetEvent[basenumbers.Length];
+            ManualResetEvent[] events = new ManualResetEvent[countThreads];
 
-            // Запускаем таймер
-            Stopwatch timer = new Stopwatch();
-            timer.Start();
-
-            // Добавляем в пул рабочие элементы с параметрами
-            for (int i = 0; i < basenumbers.Length; i++)
+            for(int th = 0; th < countThreads; th++)
             {
-                events[i] = new ManualResetEvent(false);
-                ThreadPool.QueueUserWorkItem(RunThreadFunc, new object[] { basenumbers[i], events[i], simpleNumbers });
+                // Добавляем в пул рабочие элементы с параметрами
+                for (int i = 0; i < basenumbers.Length; i++)
+                {
+                    events[th] = new ManualResetEvent(false);
+                    ThreadPool.QueueUserWorkItem(RunThreadFunc, new object[] { basenumbers[i], events[th], simpleNumbers });
+                }
             }
+            
             // Дожидаемся завершения
             WaitHandle.WaitAll(events);
-
-            // Останавливаем таймер и выводим время выполнения всех потоков
-            timer.Stop();
 
             return simpleNumbers;
         }

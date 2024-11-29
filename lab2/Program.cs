@@ -49,7 +49,17 @@ namespace lab2
 
             ConcurrentDictionary<double, double> simpleNumbers = new ConcurrentDictionary<double, double>();
 
+            string timeResult = "";
+            // Запускаем таймер
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+
             simpleNumbers = algorithm.FindSimple(arrayNumbers, basenumbers, simpleNumbers, countThreads);
+
+            // Останавливаем таймер и выводим время выполнения всех потоков
+            timer.Stop();
+
+            timeResult = "Время выполнения всех потоков: " + timer.Elapsed.ToString();
 
             double[] resultArray = new double[simpleNumbers.Count];
 
@@ -74,6 +84,8 @@ namespace lab2
                 result += number + " ";
             }
 
+            result = timeResult + "\n\n" + result;
+
             return result;
 
         }
@@ -82,9 +94,9 @@ namespace lab2
         static void Main(string[] args)
         {
 
-            string path = @"C:\Users\Admin\Desktop\Alexei\numbers.txt";
-            int N = 100;
-            int M = 4;
+            string path = @"C:\Users\Admin\Desktop\Alexei\numbers10k.txt";
+            int N = 10000;
+            int M = 2;
             SimpleNumbersClass algorithm = new SimpleNumbersClass("Алгоритм3", new Algorithm3());
 
             List<double> listNumbers = new List<double>();

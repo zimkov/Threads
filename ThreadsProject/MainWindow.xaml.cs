@@ -46,7 +46,7 @@ namespace ThreadsProject
 
 
             //Лабораторная 2
-            NComboBox2.ItemsSource = new int[] { 100, 10000, 1000000 };
+            NComboBox2.ItemsSource = new int[] { 100, 10000, 1000000, 100000000 };
             NComboBox2.SelectedIndex = 0;
             MComboBox2.ItemsSource = new int[] { 1, 2, 3, 4, 5, 10, 20, 30, 100 };
             MComboBox2.SelectedIndex = 1;
