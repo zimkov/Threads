@@ -43,7 +43,7 @@
                     <Button x:Name="StartButton2" Content="Найти простые числа" HorizontalAlignment="Left" Margin="477,246,0,0" VerticalAlignment="Top" Width="138" Height="24" Click="StartButton2_Click"/>
                     <Button x:Name="ReadFile2" Content="Прочитать файл" HorizontalAlignment="Center" Height="24" Margin="0,246,0,0" VerticalAlignment="Top" Width="138" Click="ReadFile_Click"/>
                     <TextBox Text="Время выполнения: " HorizontalAlignment="Center" Margin="0,306,0,0" VerticalAlignment="Top" x:Name="ResultLabel2"
-       Width="436" FontWeight="Bold" FontSize="12" BorderThickness="0,0,0,0"  IsReadOnly="True" Background="{x:Null}" Height="24" IsReadOnlyCaretVisible="True" />
+       Width="436" FontWeight="Bold" FontSize="12" BorderThickness="0,0,0,0"  IsReadOnly="True" Background="{x:Null}" Height="74" IsReadOnlyCaretVisible="True" />
                     <Button x:Name="PickFileButton2" Content="Выбрать" HorizontalAlignment="Left" Margin="565,64,0,0" VerticalAlignment="Top" Click="PickFileButton_Click"/>
                 </Grid>
             </TabItem>

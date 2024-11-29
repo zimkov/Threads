@@ -74,10 +74,6 @@ namespace ThreadsProject
                 result.TryAdd(number, number);
             }
 
-            // Запускаем таймер
-            Stopwatch timer = new Stopwatch();
-            timer.Start();
-
             // Создаем массив потоков
             Thread[] threads = new Thread[countThreads];
             SimpleRecordClass[] threadClass = new SimpleRecordClass[countThreads];
@@ -101,8 +97,7 @@ namespace ThreadsProject
                 thread.Join();
             }
 
-            // Останавливаем таймер и выводим время выполнения всех потоков
-            timer.Stop();
+            
             return simpleNumbers;
         }
     }
@@ -165,10 +160,6 @@ namespace ThreadsProject
                 result.TryAdd(number, number);
             }
 
-            // Запускаем таймер
-            Stopwatch timer = new Stopwatch();
-            timer.Start();
-
             // Создаем массив потоков
             Thread[] threads = new Thread[countThreads];
             SimpleRecordClass[] threadClass = new SimpleRecordClass[countThreads];
@@ -191,9 +182,6 @@ namespace ThreadsProject
             {
                 thread.Join();
             }
-
-            // Останавливаем таймер и выводим время выполнения всех потоков
-            timer.Stop();
 
             return result;
         }
@@ -234,10 +222,6 @@ namespace ThreadsProject
             // Объявляем массив сигнальных сообщений
             ManualResetEvent[] events = new ManualResetEvent[basenumbers.Length];
 
-            // Запускаем таймер
-            Stopwatch timer = new Stopwatch();
-            timer.Start();
-
             // Добавляем в пул рабочие элементы с параметрами
             for (int i = 0; i < basenumbers.Length; i++)
             {
@@ -247,8 +231,73 @@ namespace ThreadsProject
             // Дожидаемся завершения
             WaitHandle.WaitAll(events);
 
-            // Останавливаем таймер и выводим время выполнения всех потоков
-            timer.Stop();
+            return simpleNumbers;
+        }
+    }
+
+
+
+
+    //Параллельный алгоритм #4: последовательный перебор простых чисел
+    class Algorithm4 : ISimple
+    {
+        ConcurrentDictionary<double, double> simpleNumbers = new ConcurrentDictionary<double, double>();
+        private static void RunThreadFunc(object array)
+        {
+            if (array is object[] obj)
+            {
+                ConcurrentDictionary<double, double> baseNumbers = (ConcurrentDictionary<double, double>)obj[0];
+                ConcurrentDictionary<double, double> arrayNumbers = (ConcurrentDictionary<double, double>)obj[1];
+
+                foreach (double baseN in baseNumbers.Values)
+                {
+                    foreach (double number in arrayNumbers.Values)
+                    {
+                        if (number % baseN == 0)
+                        {
+                            arrayNumbers.TryRemove(number, out _);
+                        }
+                    }
+                    baseNumbers.TryRemove(baseN, out _);
+                }
+                
+            }
+        }
+
+        public ConcurrentDictionary<double, double> FindSimple(double[] arrayNumbers, double[] basenumbers, ConcurrentDictionary<double, double> simpleNumbers, int countThreads)
+        {
+            foreach (double number in arrayNumbers)
+            {
+                simpleNumbers.TryAdd(number, number);
+            }
+
+            ConcurrentDictionary<double, double> basePrime = new ConcurrentDictionary<double, double>();
+
+            foreach (double number in basenumbers)
+            {
+                basePrime.TryAdd(number, number);
+            }
+
+            // Создаем массив потоков
+            Thread[] threads = new Thread[countThreads];
+
+            for (int i = 0; i < threads.Length; i++)
+            {
+                threads[i] = new Thread(RunThreadFunc);
+                threads[i].Name = $"Поток {i}";
+            }
+
+            // Запускаем все потоки
+            for (int i = 0; i < threads.Length; i++)
+            {
+                threads[i].Start(new object[] { basePrime, simpleNumbers });
+            }
+
+            // Ожидаем завершения всех потоков
+            foreach (var thread in threads)
+            {
+                thread.Join();
+            }
 
             return simpleNumbers;
         }

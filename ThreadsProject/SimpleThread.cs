@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace ThreadsProject
 {
@@ -54,7 +55,17 @@ namespace ThreadsProject
 
             ConcurrentDictionary<double, double> simpleNumbers = new ConcurrentDictionary<double, double>();
 
+            string timeResult = "";
+            // Запускаем таймер
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+
             simpleNumbers = algorithm.FindSimple(arrayNumbers, basenumbers, simpleNumbers, countThreads);
+
+            // Останавливаем таймер и выводим время выполнения всех потоков
+            timer.Stop();
+
+            timeResult = "Время выполнения всех потоков: " + timer.Elapsed.ToString();
 
             double[] resultArray = new double[simpleNumbers.Count];
 
@@ -78,6 +89,8 @@ namespace ThreadsProject
             {
                 result += number + " ";
             }
+
+            result = timeResult + "\n\n" + result;
 
             return result;
 
