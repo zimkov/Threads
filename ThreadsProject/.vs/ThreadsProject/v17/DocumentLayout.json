@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\simplethread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|solutionrelative:simplethread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\simplenumbersclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|solutionrelative:simplenumbersclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\simplerecordclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|solutionrelative:simplerecordclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|c:\\users\\admin\\desktop\\alexei\\c# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\threads\\threadsproject\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|c:\\users\\admin\\desktop\\alexei\\c# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\threads\\threadsproject\\simplethread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|solutionrelative:simplethread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\simplerecordclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|solutionrelative:simplerecordclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6964D1B4-F335-484A-BB0B-37FBEA44AA06}|ThreadsProject.csproj|C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -34,24 +34,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAD4v24AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAEMAAAAAAAAAAIAwwGAAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T04:08:09.64Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "SimpleThread.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\SimpleThread.cs",
               "RelativeDocumentMoniker": "SimpleThread.cs",
@@ -64,20 +64,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "SimpleNumbersClass.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\SimpleNumbersClass.cs",
               "RelativeDocumentMoniker": "SimpleNumbersClass.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\SimpleNumbersClass.cs",
               "RelativeToolTip": "SimpleNumbersClass.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEBAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAA8BAAAAAAAAAAAcwPQAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T05:42:14.351Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SimpleRecordClass.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Alexei\\C# \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Threads\\ThreadsProject\\SimpleRecordClass.cs",
               "RelativeDocumentMoniker": "SimpleRecordClass.cs",
@@ -85,8 +85,7 @@
               "RelativeToolTip": "SimpleRecordClass.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T08:55:16.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T08:55:16.538Z"
             },
             {
               "$type": "Document",

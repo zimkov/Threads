@@ -88,12 +88,13 @@ namespace ThreadsProject
             {
                 for (int j = i; j < i+100; j++)
                 {
-                    buffer += j + " ";
+                    if (j != N) buffer += j + " ";
+                    if (j == N) buffer += j;
                 }
                 File.AppendAllText(path, buffer);
                 buffer = "";
             }
-            File.AppendAllText(path, N + "");
+            //File.AppendAllText(path, N + "");
             ResultLabel.Text = "Файл заполнен числами от 1 до " + N;
             ResultLabel2.Text = "Файл заполнен числами от 1 до " + N;
         }
