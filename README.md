@@ -1,6 +1,16 @@
 # Threads
  Лабораторные по Параллельному программированию
 
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#Лабораторная-1">Лабораторная 1</a></li>
+    <li><a href="#Лабораторная-2">Лабораторная 2</a></li>
+    <li><a href="#">Лабораторная 3</a></li>
+  </ol>
+</details>
+
 # Лабораторная 1
 
 # Лабораторная 2
